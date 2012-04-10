@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   
+    <string name="app_name">SumaNum\n Yuyi</string>
+    <string name="primerOp">Introduce primer operando</string>
+    <string name="segundoOp">Introduce segundo operando</string>
+    <string name="resultado">El resultado es: </string>
+
+</resources>

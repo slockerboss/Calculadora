@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/primerOp" />
+
+    <EditText
+        android:id="@+id/operando1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe operando 1"
+        android:inputType="numberDecimal" >
+
+        <!-- <requestFocus /> -->
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/segundoOp" />
+
+    <EditText
+        android:id="@+id/operando2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe operando 2"
+        android:inputType="numberDecimal" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/botonSuma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sumar" />
+
+        <TextView
+            android:id="@+id/resultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:text="@string/resultado"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/botonBorra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Borrar Operandos" />
+
+</LinearLayout>
