@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-   
-    <string name="app_name">SumaNum\n Yuyi</string>
+    <string name="app_name">Calcu\n Yuyi</string>
     <string name="primerOp">Primer operando</string>
     <string name="segundoOp">Segundo operando</string>
-    <string name="resultado">El resultado es: </string>
+    <string name="Sumar">Sumar </string>
+    <string name="Restar">Restar</string>
+    <string name="Multiplicar">Multiplicar </string>
+    <string name="Dividir">Dividir</string>
+    <string name="operando_2Hint">Operando 2</string>
+    <string name="BotonRealizarOperacion">Realizar Operación</string>
+    <string name="tituloResultado">El resultado es</string>
+    <string name="textViewInfo_texto">"PULSA boton REALIZAR OPERACION. "</string>
+    <string name="botonBorrarOperandos">Borrar Operandos</string>
 
 </resources>

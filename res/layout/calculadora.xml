@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
-        android:background="@color/Rojo"
+        
         android:minHeight="10dp"
         android:orientation="horizontal" >
     </LinearLayout>
@@ -19,7 +19,8 @@
         android:id="@+id/LayoutCuerpo"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@color/Azul"
+        android:background="@drawable/fondo1"
+        android:baselineAligned="false"
         android:orientation="vertical" >
 
         <LinearLayout
@@ -28,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
+            android:baselineAligned="false"
             android:orientation="horizontal" >
 
             <LinearLayout
@@ -71,88 +73,131 @@
                     android:id="@+id/operando2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Operando 2"
+                    android:hint="@string/operando_2Hint"
                     android:inputType="numberDecimal" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/LayoutContenido"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_marginTop="5dp"
-            android:layout_weight="0.17"
-            android:orientation="horizontal" android:id="@+id/LayautSeleccionaHazOp">
+            android:orientation="horizontal"
+            android:paddingBottom="1dp" >
 
-            <RadioGroup
-                android:id="@+id/radioGrupoOperacion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
-
-                <RadioButton
-                    android:id="@+id/radio0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:text="Sumar" />
-
-                <RadioButton
-                    android:id="@+id/radio1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Restar" />
-
-                <RadioButton
-                    android:id="@+id/radio2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="RadioButton" />
-            </RadioGroup>
-
-            <Button
-                android:id="@+id/botonOperacion"
+            <LinearLayout
+                android:id="@+id/LayaoutRadiobuttons"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Realizar Operación" />
+                android:orientation="horizontal" >
+
+                <RadioGroup
+                    android:id="@+id/radioGrupoOperacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RadioButton
+                        android:id="@+id/radio0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/Sumar" />
+
+                    <RadioButton
+                        android:id="@+id/radio1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Restar" />
+
+                    <RadioButton
+                        android:id="@+id/radio2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Multiplicar" />
+
+                    <RadioButton
+                        android:id="@+id/radio3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Dividir" />
+                </RadioGroup>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/Blanco" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LayaoutBotonOPYresultado"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="7dp"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:padding="7dp" >
+
+                <Button
+                    android:id="@+id/botonOperacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/BotonRealizarOperacion" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/Blanco" />
+
+                <TextView
+                    android:id="@+id/tituloResultado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/tituloResultado"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ErrorResultado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/resultado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/LayoutBorraOperandos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_weight="0.17"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:id="@+id/resultado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/resultado"
-                android:textSize="15dp" />
+            android:orientation="vertical" >
 
             <TextView
                 android:id="@+id/textViewInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PULSA boton REALIZAR OPERACION. " />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:orientation="horizontal" >
+                android:text="@string/textViewInfo_texto" />
 
             <Button
                 android:id="@+id/botonBorra"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Borrar Operandos" />
-
-            <Button
-                android:id="@+id/botonSuma"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sumar" />
+                android:text="@string/botonBorrarOperandos" />
         </LinearLayout>
     </LinearLayout>
 
