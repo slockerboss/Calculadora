@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/primerOp" />
+
+            <EditText
+                android:id="@+id/operando1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Operando 1"
+                android:inputType="numberDecimal" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/segundoOp" />
+
+            <EditText
+                android:id="@+id/operando2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Operando 2"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/radioGrupoOperacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/radio0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Sumar" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restar" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RadioButton" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:text="PULSA boton REALIZAR OPERACION. " />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/botonOperacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Realizar Operación" />
+
+        <TextView
+            android:id="@+id/resultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:text="@string/resultado"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/botonBorra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Borrar Operandos" />
+
+        <Button
+            android:id="@+id/botonSuma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sumar" />
+    </LinearLayout>
+
+</LinearLayout>
